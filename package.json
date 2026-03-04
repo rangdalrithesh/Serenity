@@ -1,0 +1,13 @@
+{
+  "name": "files",
+  "version": "1.0.0",
+  "description": "- **Install & run**\r   - `cd serenity-frontend`\r   - Copy env: `cp .env.example .env` and adjust `VITE_API_BASE_URL` to your backend (e.g. `http://localhost:8000`)\r   - `npm install`\r   - `npm run dev`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

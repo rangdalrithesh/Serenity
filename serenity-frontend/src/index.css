@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @apply h-full scroll-smooth;
+}
+
+body {
+  @apply font-sans bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Simple glassmorphism utility – light and dark */
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-xl border border-slate-200/80 shadow-soft rounded-3xl;
+  @apply dark:bg-slate-900/90 dark:border-slate-700/50;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes snow {
+  0% { transform: translateY(-10px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.snow {
+  animation: snow 2s linear infinite;
+}
+/* Improve light mode contrast globally */
+@media (prefers-color-scheme: light) {
+  body {
+    color: #0f172a;
+  }
+}

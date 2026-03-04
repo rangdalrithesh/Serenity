@@ -1,0 +1,91 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  /* Default (Dark Mode) */
+  --bg: #0f172a;
+  --card-bg: #111827;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --accent: #60a5fa;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Buttons */
+button {
+  border-radius: 12px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 0.95em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1f2937;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: linear-gradient(180deg, #eaf2ff 0%, #f8fafc 100%);
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent: #2563eb;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+  }
+
+  .card {
+    background: var(--card-bg);
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  button {
+    background-color: #2563eb;
+    color: white;
+  }
+
+  button:hover {
+    opacity: 0.92;
+  }
+}

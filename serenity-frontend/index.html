@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/serenity_logo_white.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var raw = localStorage.getItem('serenity-app-store');
+          if (raw) {
+            var data = JSON.parse(raw);
+            if (data && data.state && data.state.theme === 'light') {
+              document.documentElement.classList.remove('dark');
+              return;
+            }
+          }
+        } catch (e) {}
+        document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <title>SERENITY – Pause. Reflect. Breathe.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-sky-50 dark:bg-slate-950 transition-colors">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
