@@ -49,7 +49,7 @@ export function TherapistDashboardPage() {
   const exportReport = async () => {
     setExporting(true);
     try {
-      const response = await fetch('http://localhost:8000/api/reports/export');
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'}/api/reports/export`);
       if (!response.ok) throw new Error('Export failed');
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
