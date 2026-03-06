@@ -44,7 +44,7 @@ PAGE_W, PAGE_H = A4
 MARGIN = 0.60 * inch
 CONTENT_W = PAGE_W - 2 * MARGIN
 
-LOGO_PATH   = Path(r"C:\Users\rithe\Downloads\pengu (2).png")
+LOGO_PATH = Path(__file__).parent.parent / "assets" / "serenity_logo_white.png"
 LOGO_ASPECT = 906 / 588
 
 # ══════════════════════════════════════════════════════════════════════════════
